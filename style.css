@@ -1,0 +1,129 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo y contenedor general */
+body {
+    background-color: #F6EBB1;
+    color: #677E52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Estilos de encabezado */
+.header {
+    background-color: #B0CC99;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #89725B;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu-icono {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #89725B;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #dedede;
+}
+
+/* Encabezado de contenido */
+.header-content {
+    padding: 80px 20px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #89725B;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    font-size: 18px;
+    color: #677E52;
+    margin-bottom: 30px;
+}
+
+/* Botón de Información */
+.btn-1 {
+    text-decoration: none;
+    background-color: #B0CC99;
+    color: #F6EBB1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 1.5cm; /* Espacio entre secciones */
+}
+
+.btn-1:hover {
+    background-color: #8ca678;
+}
+
+/* Separación entre secciones */
+h2, h3 {
+    color: #89725B;
+    margin-bottom: 1cm; /* Espacio de 2cm entre cada título */
+}
+
+p, ul, li {
+    margin-bottom: 1cm; /* Espacio de 2cm entre cada tema */
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    #menu:checked + label + .navbar ul {
+        display: flex;
+    }
+
+    .menu-icono {
+        display: block;
+    }
+}
